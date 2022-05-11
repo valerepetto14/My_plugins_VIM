@@ -1,0 +1,25 @@
+call plug#begin('~/.vim/plugged')
+Plug 'mhartington/oceanic-next'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'scrooloose/nerdtree'
+Plug 'srcery-colors/srcery-vim'
+Plug 'dense-analysis/ale'
+Plug 'JuanDAC/betty-ale-vim'
+call plug#end()
+" Theme
+ syntax enable
+"   " for vm 7
+   set t_Co=256
+
+     " for vim 8
+
+   if (has("termguicolors"))
+   set termguicolors
+   endif
+  colorscheme OceanicNext
+
+        nnoremap <leader>n :NERDTreeFocus<CR>
+        nnoremap <C-n> :NERDTree<CR>
+        nnoremap <C-t> :NERDTreeToggle<CR>
+        nnoremap <C-f> :NERDTreeFind<CR>
+let g:indent_guides_enable_on_vim_startup = 4
